@@ -58,14 +58,11 @@ class Movie {
     }
 };
 
-//functions
-
 int main() {
     vector<Movie> movies;
     srand(time(0));
     ifstream fin ("moviecomments.txt");
     string t, c;
-
 
     if (fin.good()) {
 
