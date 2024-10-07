@@ -31,10 +31,13 @@ int main() {
     srand(time(0));
     ifstream fin ("moviecomments.txt");
     string c;
-    
+
+
     if (fin.good()) {
         while (getline(fin, c)){
-            fin.ignore()
+            fin.ignore();
+            Movie temp;
+            temp
         }
     }
 }
