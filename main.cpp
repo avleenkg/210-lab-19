@@ -60,6 +60,7 @@ class Movie {
 //functions
 
 int main() {
+    vector<Movie> movies;
     srand(time(0));
     ifstream fin ("moviecomments.txt");
     string t, c;
@@ -71,11 +72,16 @@ int main() {
             Movie temp;
             temp.setTitle(t);
 
-            for (int i = 0; i < 7; i++){
+            for (int i = 0; i < 3; i++){
                 getline(fin, c);
                 float r = (rand() % 41) / 10.0 + 1.0;
                 temp.addfront(r, c);
             }
+            temp.output();
+            cout << endl;
         }
+    }
+    else {
+        cout << "Error. File not found.\n";
     }
 }
