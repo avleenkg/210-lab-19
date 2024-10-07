@@ -21,6 +21,7 @@ class Movie {
 
     //setters and getters, getters needed to access private info
     public:
+    Movie()                     { head = nullptr; }
     string getTitle() const     { return title; }
     void setTitle(string t)     { title = t; }
 
@@ -77,8 +78,10 @@ int main() {
                 float r = (rand() % 41) / 10.0 + 1.0;
                 temp.addfront(r, c);
             }
-            temp.output();
-            cout << endl;
+            movies.push_back(temp);
+        }
+        for (int i = 0; i < movies.size(); i++){
+            movies[i].output();
         }
     }
     else {
