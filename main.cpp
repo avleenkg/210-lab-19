@@ -65,13 +65,17 @@ int main() {
     string t, c;
 
 
-    /*if (fin.good()) {
+    if (fin.good()) {
+
         while (getline(fin, t)){
-            fin.ignore();
-            getline(fin, c);
             Movie temp;
             temp.setTitle(t);
+
+            for (int i = 0; i < 7; i++){
+                getline(fin, c);
+                float r = (rand() % 41) / 10.0 + 1.0;
+                temp.addfront(r, c);
+            }
         }
     }
-    */
 }
